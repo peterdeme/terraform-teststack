@@ -14,7 +14,7 @@ provider "aws" {
 resource "aws_ssm_parameter" "testparam" {
     name = "peterdeme-test-parameter"
     type = "String"
-    value = "foobar1234567"
+    value = "foobar12345678"
 
     tags = {
         developer = "peterdeme"
