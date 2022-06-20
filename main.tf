@@ -23,6 +23,6 @@ resource "aws_ssm_parameter" "testparam" {
 }
 
 resource "random_password" "password" {
-  count = 2
+  count = 4000
   length = 2
 }
