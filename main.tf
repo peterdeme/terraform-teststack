@@ -21,3 +21,8 @@ resource "aws_ssm_parameter" "testparam" {
         env_name = "development"
     }
 }
+
+resource "random_password" "password" {
+  count = 1
+  length = 2
+}
