@@ -1,29 +1,13 @@
-#terraform {
-#  required_providers {
-#    aws = {
-#      source  = "hashicorp/aws"
-#      version = "~> 3.0"
-#   }
-#  }
-#}
-
 resource "random_string" "random" {
-  length           = 23
+  length           = 27
   special          = true
   override_special = "/@£$"
 }
 
-#provider "aws" {
-#  region = "eu-central-1"
-#}
+resource "random_string" "random2" {
+  length           = 11
+  special          = true
+  override_special = "/@£$"
+}
 
-#resource "aws_ssm_parameter" "testparam" {
-#    name = "peterdeme-test-parameter"
-#    type = "String"
-#    value = "foobar"
 
-#    tags = {
-#        developer = "peterdeme"
-#        env_name = "development"
-#    }
-#}
