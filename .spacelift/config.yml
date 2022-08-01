@@ -2,5 +2,5 @@ version: "1"
 
 stacks:
   terraform-github:
-    terraform_version: 1.2.1
+    terraform_version: 1.2.0
     placeholder: 1
