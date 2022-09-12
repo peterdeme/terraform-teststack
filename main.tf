@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 resource "aws_ssm_parameter" "testparam" {
-  name  = "peterdeme-test-parameter"
+  name  = "peterdeme-test-parameter-1"
   type  = "String"
   value = "foobar1"
 
@@ -21,3 +21,4 @@ resource "aws_ssm_parameter" "testparam" {
     env_name  = "development"
   }
 }
+
