@@ -8,7 +8,7 @@
 #}
 
 resource "random_string" "random" {
-  length           = 46
+  length           = 47
   special          = true
   override_special = "/@£$"
 }
