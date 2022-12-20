@@ -11,8 +11,11 @@ provider "aws" {
   region = "eu-central-1"
 }
 
+resource "random_pet" "petname" {
+}
+
 resource "aws_ssm_parameter" "testparam" {
-  name  = "peterdeme-test-parameter-2"
+  name  = "peterdeme-test-parameter-2-${random_pet.petname.id}"
   type  = "String"
   value = "foobar1"
 
