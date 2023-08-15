@@ -25,6 +25,10 @@ resource "aws_ssm_parameter" "testparam" {
   }
 }
 
+output "param_arn" {
+  value = aws_ssm_parameter.testparam.arn
+}
+
 # resource "random_string" "random" {
 #   length           = 48
 #   special          = true
