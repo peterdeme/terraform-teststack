@@ -21,7 +21,7 @@ terraform {
 # }
 
 resource "aws_ssm_parameter" "testparam" {
-  name = "peterdeme-test-parameter-2-${random_pet.petname.id}"
+  name = "peterdeme-test-parameter-2-uncommon-ostrich" # "peterdeme-test-parameter-2-${random_pet.petname.id}"
   type = "String"
   # value = "foobar12"
 
