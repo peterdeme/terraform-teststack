@@ -1,3 +1,9 @@
+
+import {
+  id = "arn:aws:ssm:eu-central-1:705096403113:parameter/peterdeme-test-parameter-2-uncommon-ostrich"
+  to = aws_ssm_parameter.testparam
+}
+
 terraform {
   required_providers {
     aws = {
@@ -7,17 +13,17 @@ terraform {
   }
 }
 
-provider "aws" {
-  region = "eu-central-1"
-}
+# provider "aws" {
+#   region = "eu-central-1"
+# }
 
-resource "random_pet" "petname" {
-}
+# resource "random_pet" "petname" {
+# }
 
 resource "aws_ssm_parameter" "testparam" {
-  name  = "peterdeme-test-parameter-2-${random_pet.petname.id}"
-  type  = "String"
-  value = "foobar12"
+  name = "peterdeme-test-parameter-2-${random_pet.petname.id}"
+  type = "String"
+  # value = "foobar12"
 
   tags = {
     developer = "peterdeme"
@@ -25,12 +31,6 @@ resource "aws_ssm_parameter" "testparam" {
   }
 }
 
-output "param_arn" {
-  value = aws_ssm_parameter.testparam.arn
-}
-
-# resource "random_string" "random" {
-#   length           = 48
-#   special          = true
-#   override_special = "/@£$"
+# output "param_arn" {
+#   value = aws_ssm_parameter.testparam.arn
 # }
